@@ -34,6 +34,11 @@
   padding: 20px;
 }
 
+.infotext p {
+  font-size: 10;
+  color: #19060c;
+}
+
 .ekonomiInput h3 {
   font-size: 20px;
   color: #8b072f;

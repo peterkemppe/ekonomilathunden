@@ -78,23 +78,25 @@ const EkonomiLathunden = () => {
             <button onClick={() => andraLon(bruttoLon+100)}>+100 kr</button><button onClick={() => andraLon(bruttoLon-100)}>-100 kr</button>
             <p>Arbetsgivaravgifter: {arbetsgivaravgift} kr</p>
             <h3>Tjänstepension</h3>
+            <div class="infotext">
             <label>
                 <p><input
                     type="checkbox"
                     checked={itp1}
                     onChange={handleItp1Change}
-                /> ITP 1 - om du vill att pensionen ska beräknas automatiskt utifrån ITP 1 - 2023 års basbelopp)</p>
+                /> ITP 1 - pensionen beräknas automatiskt utifrån ITP 1 - 2023 års basbelopp</p>
             </label>
+            </div>
             <p>Pension: {tjanstepension} kr</p>
             { !itp1 && <div><button onClick={() => andraPension(tjanstepension+1000)}>+1000 kr</button><button onClick={() => andraPension(tjanstepension-1000)}>-1000 kr</button>
             <button onClick={() => andraPension(tjanstepension+100)}>+100 kr</button><button onClick={() => andraPension(tjanstepension-100)}>-100 kr</button>
             <button onClick={() => andraPension(0)}>Nollställ pension</button></div> }
             <p>Särskild löneskatt: {loneskatt} kr</p>
-            <h3>Totalkostnad för lön och tjänstepension</h3>
+            <h3>Totalkostnad för lön och tjänstepension per månad</h3>
             <p>{bruttoLon+arbetsgivaravgift+tjanstepension+loneskatt} kr</p>
             <h3>Totalkostnad för lön och tjänstepension på ett år</h3>
             <p>{(bruttoLon+arbetsgivaravgift+tjanstepension+loneskatt)*12} kr</p>
-            <h3>Övriga kostnader: </h3>
+            <h3>Övriga kostnader</h3>
             <input 
                 type="number" 
                 value={ovrigt}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ekonomilathunden/static/css/main.67a17ff8.css",
+    "main.js": "/ekonomilathunden/static/js/main.e6f824a9.js",
+    "index.html": "/ekonomilathunden/index.html",
+    "main.67a17ff8.css.map": "/ekonomilathunden/static/css/main.67a17ff8.css.map",
+    "main.e6f824a9.js.map": "/ekonomilathunden/static/js/main.e6f824a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67a17ff8.css",
+    "static/js/main.e6f824a9.js"
+  ]
+}

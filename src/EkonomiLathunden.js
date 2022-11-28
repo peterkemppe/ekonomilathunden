@@ -3,17 +3,17 @@ import { useState } from 'react';
 const EkonomiLathunden = () => {
 
     const [itp1, setItp1] = useState(false);
-    const [timpris, setTimpris] = useState(780);
+    const [timpris, setTimpris] = useState(750);
     const [arbetstimmar, setArbetstimmar] = useState(1700);
     const [ovrigt, setOvrigt] = useState(20000);
 
     const arbGivAvgPrc = 0.3142;
     const loneskattPrc = 0.2426;
-    
+
     const [bruttoLon, setBruttoLon] = useState(51200);
     const [arbetsgivaravgift, setArbetsgivaravgift] = useState(Math.ceil(bruttoLon*arbGivAvgPrc));
 
-    const [tjanstepension, setTjanstepension] = useState(4975);
+    const [tjanstepension, setTjanstepension] = useState(4000);
     const [loneskatt, setLoneskatt] = useState(Math.ceil(tjanstepension*loneskattPrc));
     
     const andraLon = (nyLon) => {
@@ -83,7 +83,7 @@ const EkonomiLathunden = () => {
                     type="checkbox"
                     checked={itp1}
                     onChange={handleItp1Change}
-                /> ITP 1 - om du vill att pensionen ska beräknas automatiskt utifrån ITP 1</p>
+                /> ITP 1 - om du vill att pensionen ska beräknas automatiskt utifrån ITP 1 - 2023 års basbelopp)</p>
             </label>
             <p>Pension: {tjanstepension} kr</p>
             { !itp1 && <div><button onClick={() => andraPension(tjanstepension+1000)}>+1000 kr</button><button onClick={() => andraPension(tjanstepension-1000)}>-1000 kr</button>

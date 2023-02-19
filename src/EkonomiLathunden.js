@@ -94,6 +94,7 @@ const EkonomiLathunden = () => {
             <p>Särskild löneskatt: {loneskatt} kr</p>
             <h3>Totalkostnad för lön och tjänstepension per månad</h3>
             <p>{bruttoLon+arbetsgivaravgift+tjanstepension+loneskatt} kr</p>
+            <p>{Math.ceil((bruttoLon+arbetsgivaravgift+tjanstepension+loneskatt)/(timpris*8))} arbetsdagar krävs.</p>
             <h3>Totalkostnad för lön och tjänstepension på ett år</h3>
             <p>{(bruttoLon+arbetsgivaravgift+tjanstepension+loneskatt)*12} kr</p>
             <h3>Övriga kostnader</h3>
